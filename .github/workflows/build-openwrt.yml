@@ -12,21 +12,21 @@ name: OpenWrt-CI
 on:
   push:
     branches: 
-      - openwrt-21.02
+      - openwrt-21.02.5
 
   release:
     types: [published]
 
 jobs:
   build_openwrt:
-    name: Build OpenWrt-21.02
+    name: Build OpenWrt-21.02.5
     runs-on: ubuntu-20.04
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: openwrt-21.02
+          ref: openwrt-21.02.5
 
       - name: Build Depends
         env:
